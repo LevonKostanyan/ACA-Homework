@@ -55,15 +55,21 @@ console.log(powersOf2)
 
 // 4.Given a number as input, insert dashes (-) between each two even numbers.
 
-let number = [1, 1, 2, 2, 1, 1, 2, 2];
-let numArr = "";
-for (let i = 0; i < number.length; i++) {
-    if (number[i] % 2 === 0 && (number[i + 1]) % 2 === 0) {
-        numArr += number[i]
-        numArr += "-";
+let number = [1, 1, 2, 2, 1, 1]
+
+function dashesEven(arr) {
+    let newArr = []
+    for (let i = 0; i < number.length; i++) {
+        if (number[i] % 2 === 0 && number[i + 1] % 2 === 0) {
+            newArr.push(number['-'])
+        } else {
+            newArr.push(number[i])
+
+        }
     }
+    console.log(newArr)
 }
-console.log(numArr)
+
+dashesEven(number);
 
 // 5.Insert a n positive number. Print the n-st prime number.
-
