@@ -20,56 +20,56 @@ console.log(sumElements);
 // 3. Given two numbers. Print powers of 2 between that numbers. (without using
 // Math.pow)
 
-let num1 = 7;
-let num2 = 45;
-let powersOf2 = [];
-let power2 = [];
-
-function customPow(number, pow) {
-    if (pow <= 0) {
-        return number
+function getPowerResult(a, b) {
+    let newArray = [];
+    for (let i = a; i <= b; i++) {
+        if ((2 ** i) >= a && (2 ** i) <= b) {
+            newArray.push(2 ** i);
+        }
     }
-
-    let numberPow = 1;
-
-    for (let i = 0; i < pow; i++) {
-        numberPow *= number
-    }
-
-    return numberPow;
+    return newArray;
 }
 
-for (let i = 0; i < 10; i++) {
-    power2.push(customPow(2, i))
-}
-
-for (let i = num1; i < num2; i++) {
-    const isValidNumber = power2.find((power2Number) => power2Number === i);
-
-    if (isValidNumber) {
-        powersOf2.push(i)
-    }
-}
-
-console.log(powersOf2)
+getPowerResult(0, 150);
 
 // 4.Given a number as input, insert dashes (-) between each two even numbers.
 
-let number = [1, 1, 2, 2, 1, 1]
-
-function dashesEven(arr) {
-    let newArr = []
-    for (let i = 0; i < number.length; i++) {
-        if (number[i] % 2 === 0 && number[i + 1] % 2 === 0) {
-            newArr.push(number['-'])
+function numberDashes(num) {
+    let numArr = String(num).split('')
+    let newNumber = "";
+    for (let i = 0; i < numArr.length; i++) {
+        if (numArr[i] % 2 === 0 && numArr[i + 1] % 2 === 0) {
+            newNumber += numArr[i] + "-";
         } else {
-            newArr.push(number[i])
-
+            newNumber += numArr[i];
         }
     }
-    console.log(newArr)
+    return (newNumber)
 }
 
-dashesEven(number);
+console.log(numberDashes(122100))
 
 // 5.Insert a n positive number. Print the n-st prime number.
+
+function primeElementOfArr(positiveNumber, lastElementOfArr) {
+    let arr = [];
+    for (let i = 0; i <= lastElementOfArr; i++) {
+        arr.push(i)
+    }
+
+    function isPrime(num) {
+        for (let j = 2; j < num; j++) {
+            if (num % j === 0) {
+                return false
+            }
+        }
+        return num > 1
+    }
+
+    let primeNumbersArr = arr.filter(isPrime)
+
+    let primeArrChange = primeNumbersArr.splice(positiveNumber - 1)
+    return primeArrChange[0];
+}
+
+console.log(primeElementOfArr(14, 100))
