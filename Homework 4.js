@@ -32,7 +32,7 @@ function getPowerResult(a, b) {
 
 getPowerResult(0, 150);
 
-// 4.Given a number as input, insert dashes (-) between each two even numbers.
+// 4.Given a number than input, insert dashes (-) between each two even numbers.
 
 function numberDashes(num) {
     let numArr = String(num).split('')
@@ -49,7 +49,7 @@ function numberDashes(num) {
 
 console.log(numberDashes(122100))
 
-// 5.Insert a n positive number. Print the n-st prime number.
+// 5.Insert an n positive number. Print the n-st prime number.
 
 function primeElementOfArr(positiveNumber, lastElementOfArr) {
     let arr = [];

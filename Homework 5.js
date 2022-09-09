@@ -8,7 +8,8 @@ function numbers(a, b, c) {
     }
     return arr
 }
-console.log(numbers(1,5,0.5))
+
+console.log(numbers(1, 5, 0.5))
 
 // 2. Given a string and a symbol. Find the number of occurrences of the symbol in the string.
 
@@ -27,14 +28,15 @@ console.log(countSymbol("another string", "t"))
 
 // 3. Given a string. Check whether the string is palindrome or not.
 
-function checkPalindrome(string){
+function checkPalindrome(string) {
     let length = string.length
-    for(let i = 0; i < length / 2;i++){
-        if(string[i] !== string[length - 1 - i])
+    for (let i = 0; i < length / 2; i++) {
+        if (string[i] !== string[length - 1 - i])
             return "No"
     }
     return "Yes"
 }
+
 console.log(checkPalindrome(""))
 
 // 4. Given an array of numbers. Find the maximum element in array.
@@ -46,13 +48,13 @@ function numbersArr(arr) {
 
 // or
 
-let maxValue = 0
-for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > maxValue) {
-        maxValue = arr[i]
+    let maxValue = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > maxValue) {
+            maxValue = arr[i]
+        }
     }
-}
-return maxValue
+    return maxValue
 }
 
 console.log(numbersArr([1, 5, 8, 12, 45, 2, -99, 564, 6546, 6313, -56151, -5615]))
